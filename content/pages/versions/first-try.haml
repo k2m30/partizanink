@@ -1,0 +1,13 @@
+Date: 20 May 2014
+Categories: versions
+
+%h1 Первая попытка
+#fb-root
+:javascript
+  (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+.fb-post{"data-href" => "https://www.facebook.com/video.php?v=768116633210049", "data-width" => "560"}
+  .fb-xfbml-parse-ignore
+    %a{:href => "http://www.facebook.com/video.php?v=768116633210049"} Post
+    by
+    = succeed "." do
+      %a{:href => "https://www.facebook.com/mikhail.chuprynski"} Mikhail Chuprynski

@@ -1,7 +1,7 @@
 # Title and subheading for your site. Used on the home page and in page
 # titles.
 #
-title: "PartisanInk"
+title: "Partisanink"
 subtitle: "Yet another drawing machine"
 
 # You should really specify your content's author when generating an
@@ -53,7 +53,7 @@ content: content
 #     default link text. You can still override this value on a per-page
 #     basis with the 'Read more' metadata key.
 #
-read_more: "details"
+read_more: "дальше"
 
 # Overriding "content" in production is recommended if you're deploying
 # Nesta to your own server (but see the deployment documentation on the
