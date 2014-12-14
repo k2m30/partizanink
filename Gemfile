@@ -5,6 +5,7 @@ Encoding.default_internal = Encoding::UTF_8
 
 gem 'nesta', '0.10.0'
 gem 'haml-contrib'
+gem 'nesta-plugin-foldable'
 
 
 group :development do
