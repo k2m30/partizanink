@@ -6,3 +6,5 @@ versions/word
   versions/1.5
   versions/2.0
   versions/roadmap
+vision/good-and-bad
+vision/other
