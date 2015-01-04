@@ -44,7 +44,7 @@ content: content
 #     scroll down a bit to set it in production even if you're not deploying
 #     to your own server.
 #
-# google_analytics_code: "UA-???????-?"
+google_analytics_code: "UA-53378414-2"
 
 # read_more
 #     When the summary of an article is displayed on the home page, or
@@ -62,6 +62,6 @@ read_more: "дальше"
 #
 # Don't forget to uncomment the "production:" line too...
 
-# production:
+production:
 #   content: /var/apps/nesta/shared/content
-#   google_analytics_code: "UA-???????-?"
+   google_analytics_code: "UA-53378414-2"
