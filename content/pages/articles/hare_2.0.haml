@@ -1,0 +1,52 @@
+Date: 07 February 2015
+Categories: articles
+
+%h1 Оптимизация холостого хода
+%p
+  Хоть и не очень критично, но я не смог смириться с избытком холостого хода. Ничего не выдумывая, написал самый
+  простой алгоритм. Он далек от оптимального, но удалось сократить перемещения в полтора раза ±20%.
+%p
+  Плюс прикрутил анимацию, чтобы можно было смотреть до того, как рисовать.
+%p
+  Стало:
+
+%object{data: '/attachments/articles/hare_optimized.svg', type: 'image/svg+xml', id: 'optimized'}
+
+%br
+%div{style: 'margin: auto 40%;'}
+  %button{autofocus: 'true', onclick: "paint('optimized')", style: 'width: 100%; height: 50px;'} Посмотреть
+%br
+
+%p
+  Было:
+%object{data: '/attachments/articles/hare.svg', type: 'image/svg+xml', id: 'no'}
+%br
+%div{style: 'margin: auto 40%;'}
+  %button{autofocus: 'true', onclick: "paint('no')", style: 'width: 100%; height: 50px;'} Посмотреть
+%br
+
+
+:javascript
+  function paint(name){
+      var svgobject = document.getElementById(name); // Находим тег
+      if ('contentDocument' in svgobject) {              // У нас действительно там что-то есть?
+          var velocity = 500; // px/sec
+          var delay = 0;
+          var paths = document.getElementById(name).contentDocument.querySelectorAll('g path');
+          var transition = null;
+          for (var i = 0; i < paths.length; i++) {
+              length = paths[i].getTotalLength();
+              paths[i].style.markerStart = paths[i].style.markerEnd = 'none';
+              paths[i].style.transition = paths[i].style.WebkitTransition = 'none';
+              paths[i].style.strokeDasharray = length + ' ' + length;
+              paths[i].style.strokeDashoffset = length;
+              time = length / velocity;
+              transition = 'stroke-dashoffset ' + time + 's ease-in-out ' + delay + 's';
+              delay += time;
+              paths[i].getBoundingClientRect();
+              paths[i].style.transition = paths[i].style.WebkitTransition = transition;
+              paths[i].style.strokeDashoffset = '0';
+          }
+      }
+
+  };

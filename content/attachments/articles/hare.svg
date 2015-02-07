@@ -1066,4 +1066,5 @@
      marker-end="url(#arrow-end)">
     <path d="M331.73 420.09 L50 50"/>
   </g>
+  <text x="15" y="15" font-family="'PT Serif Caption', 'Helvetica Neue', Arial, serif;" font-size="12px" fill="red">Холостой ход: 3711mm, Рисование: 3332mm</text>
 </svg>
