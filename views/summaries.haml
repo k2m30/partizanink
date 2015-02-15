@@ -7,9 +7,13 @@
             %h1
               %a(href="#{path_to(page.abspath)}")= page.link_text
           - if page.summary.nil? || page.summary.empty?
-            ~ page.body(self)
+            - cut = page.body(self).split('<cut>')
+            ~ cut.first
+            -if cut.size > 1
+              %p.youtube.read_more
+                %a(href="#{path_to(page.abspath)}")= page.read_more
           - else
             ~ page.summary
-            %p.read_more
+            %p.read_more.youtube
               %a(href="#{path_to(page.abspath)}")= page.read_more
           = haml :page_meta, :layout => false, :locals => { :page => page }

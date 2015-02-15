@@ -2,30 +2,6 @@ Date: 07 February 2015
 Categories: articles
 
 %h1 Оптимизация холостого хода
-%p
-  Хоть и не очень критично, но я не смог смириться с избытком холостого хода. Ничего не выдумывая, написал самый
-  простой алгоритм. Он далек от оптимального, но удалось сократить перемещения в полтора раза ±20%.
-%p
-  Плюс прикрутил анимацию, чтобы можно было смотреть до того, как рисовать.
-%p
-  Стало:
-
-%object{data: '/attachments/articles/hare_optimized.svg', type: 'image/svg+xml', id: 'optimized'}
-
-%br
-%div{style: 'margin: auto 40%;'}
-  %button{autofocus: 'true', onclick: "paint('optimized')", style: 'width: 100%; height: 50px;'} Посмотреть
-%br
-
-%p
-  Было:
-%object{data: '/attachments/articles/hare.svg', type: 'image/svg+xml', id: 'no'}
-%br
-%div{style: 'margin: auto 40%;'}
-  %button{autofocus: 'true', onclick: "paint('no')", style: 'width: 100%; height: 50px;'} Посмотреть
-%br
-
-
 :javascript
   function paint(name){
       var svgobject = document.getElementById(name); // Находим тег
@@ -50,3 +26,25 @@ Categories: articles
       }
 
   };
+%p
+  Хоть и не очень критично, но я не смог смириться с избытком холостого хода. Ничего не выдумывая, написал самый
+  простой алгоритм. Он далек от оптимального, но удалось сократить перемещения в полтора раза ±20%.
+%p
+  Плюс прикрутил анимацию, чтобы можно было смотреть до того, как рисовать.
+%p
+  Стало:
+
+%object{data: '/attachments/articles/hare_optimized.svg', type: 'image/svg+xml', id: 'optimized'}
+
+%br
+%div{style: 'margin: auto 40%;'}
+  %button{autofocus: 'true', onclick: "paint('optimized')", style: 'width: 100%; height: 50px;'} Посмотреть
+%br
+%cut
+%p
+  Было:
+%object{data: '/attachments/articles/hare.svg', type: 'image/svg+xml', id: 'no'}
+%br
+%div{style: 'margin: auto 40%;'}
+  %button{autofocus: 'true', onclick: "paint('no')", style: 'width: 100%; height: 50px;'} Посмотреть
+%br
