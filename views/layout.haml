@@ -5,8 +5,12 @@
     %meta(content="width=device-width, initial-scale=1.0" name="viewport")
     - if @description
       %meta(name="description" content=@description)
+    - else
+      %meta(name="description" content='Partisanink, сайт робота-рисовача, мы рисуем на домах и делаем наш город лучше.')
     - if @keywords
       %meta(name="keywords" content=@keywords)
+    - else
+      %meta(name="keywords" content='Partisanink, Drawing machine, рисовач')
     %title= @title
     %link(href='http://fonts.googleapis.com/css?family=PT+Serif+Caption:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css')
     <!--[if ! lte IE 6]><!-->
