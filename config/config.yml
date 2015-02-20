@@ -54,6 +54,7 @@ google_analytics_code: "UA-53378414-2"
 #     basis with the 'Read more' metadata key.
 #
 read_more: "читать дальше"
+per_page: 10
 
 # Overriding "content" in production is recommended if you're deploying
 # Nesta to your own server (but see the deployment documentation on the

@@ -1,4 +1,11 @@
 - unless pages.empty?
+  - per_page = Nesta::Config.fetch('per_page', 8)
+  - page = params[:page].nil? ? 1 : params[:page].to_i
+  - start_page = (page - 1) * per_page
+  - end_page = page * per_page - 1
+  - all_pages = Nesta::Page.find_articles
+  - pages = all_pages[start_page..end_page]
+  - all_pages.size
   %ol
     - pages.each do |page|
       %li
@@ -17,3 +24,8 @@
             %p.read_more.youtube
               %a(href="#{path_to(page.abspath)}")= page.read_more
           = haml :page_meta, :layout => false, :locals => { :page => page }
+
+    -if page*per_page < all_pages.size
+      %a{href:"/?page=#{page+1}"} &larr; Назад
+    -if page > 1
+      %a{href:"/?page=#{page-1}"} Вперед &rarr;

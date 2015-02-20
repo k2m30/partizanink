@@ -53,5 +53,5 @@ PLATFORMS
 DEPENDENCIES
   haml-contrib
   mr-sparkle
-  nesta (= 0.10.0)
+  nesta (~> 0.10.0)
   nesta-plugin-foldable
