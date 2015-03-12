@@ -4,7 +4,7 @@ about/about
 versions/word
   versions/first-try
   versions/1.5
-  versions/2.0
+  versions/2.0-release
   versions/roadmap
 vision/good-and-bad
 vision/other
