@@ -2,9 +2,10 @@ about/about
   about/team
   about/goal
 versions/word
-  versions/first-try
-  versions/1.5
-  versions/2.0-release
-  versions/roadmap
+versions/first-try
+versions/1.5
+versions/2.0-release
+versions/2.5
+versions/roadmap
 vision/good-and-bad
 vision/other
