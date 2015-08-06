@@ -55,3 +55,6 @@ DEPENDENCIES
   mr-sparkle
   nesta (~> 0.10.0)
   nesta-plugin-foldable
+
+BUNDLED WITH
+   1.10.2
