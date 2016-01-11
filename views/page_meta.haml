@@ -1,11 +1,10 @@
 - if page.date
   %footer
     %p.meta
-      Published
+      Добавлено
       - if page.date
-        on
-        %time(datetime="#{page.date.to_s}" pubdate=true)= format_date(page.date)
-      - if (! page.categories.empty?)
+        %time(datetime="#{page.date.to_s}" pubdate=true)= page.date.strftime('%d/%m/%Y')
+      - unless page.categories.empty?
         in
         - page.categories.each do |category|
           - if category != page.categories[-1]
